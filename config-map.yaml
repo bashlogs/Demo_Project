@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: backend-config
+data:
+  MONGO_URI: "mongodb+srv://mayur:jR3wF90oSnfZGAQt@learning.xg62wwm.mongodb.net/formDB"
+  PORT: "5000" 
+
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: frontend-config
+data:
+  REACT_APP_BACKEND_URL: "http://backend-service:5000"
