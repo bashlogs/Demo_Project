@@ -37,7 +37,7 @@ kind: ConfigMap
 metadata:
   name: backend-config
 data:
-  MONGO_URI: {MONGODB_URL}
+  MONGO_URI: "mongodb+srv://mayur:7cehxAfCFBmrt1AY@learning.xg62wwm.mongodb.net/formDB"
   PORT: "5000" 
 
 ---

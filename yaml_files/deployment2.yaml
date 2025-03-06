@@ -3,7 +3,7 @@ kind: ConfigMap
 metadata:
   name: configs
 data:
-  MONGO_URI: {YOUR_MONGO_URI}
+  MONGO_URI: "mongodb+srv://mayur:7cehxAfCFBmrt1AY@learning.xg62wwm.mongodb.net/formDB"
   PORT: "5000"
 
 ---
