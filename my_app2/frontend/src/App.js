@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./App.css";
 
@@ -10,12 +10,15 @@ function App() {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
+  // useEffect(() => {
+  //   // Log the backend URL to browser console
+  //   console.log("Backend URL:", window._env_.REACT_APP_BACKEND_URL);
+  // }, []);
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const backendUrl = process.env.REACT_APP_BACKEND_URL || window._env_.REACT_APP_BACKEND_URL;
-      console.log("Version: 7.0 and Backend url: ", backendUrl);
-      const response = await axios.post(`${backendUrl}/submit`, form);
+      const response = await axios.post('/api/submit', form);
       setMessage(response.data.message);
     } catch (error) {
       if (error.response) {

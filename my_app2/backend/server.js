@@ -5,6 +5,11 @@ const cors = require("cors");
 
 const app = express();
 app.use(express.json());
+const corsOptions = {
+  origin: 'http://frontend-service:80', // Replace with your frontend URL
+  methods: 'GET,POST',
+  allowedHeaders: 'Content-Type',
+};
 app.use(cors());
 
 const PORT = process.env.PORT || 5000;
